@@ -72,3 +72,13 @@ a prompt will be shown on the client's booking stating that it was successful. E
 4. Review - a Review object represents the relationship and information regarding a review left by a client, the content and the trainer's page.
 
 `gym/views.py` contains all the view functions necessary for processing of data and transferring of data back to the client-side. 
+
+# Lessons Learnt
+1. Using vanilla JavaScript to create dynamic web interfaces, including the use of buttons, textareas, and forms.
+2. Understanding the interaction between the client-side and server-side, and how data can be passed from the client-side to the server-side for processing.
+3. The design and development of a Single-Page Application, through the use of JavaScript to dynamically display content to the user.
+4. Representing and using JSON data.
+5. Using and understanding the fetch API, which retrieves information and returns a promise. The promise is only resolved when needed.  
+6. Using the Django framework as an abstraction of SQL, to create models and enable the interaction with database.
+7. Using Python to create view functions that allow the frontend (client-side JavaScript) to interact with the backend (Django) and vice versa.
+8. Django's Model-View-Template (MVT) software design pattern. 
