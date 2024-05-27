@@ -56,6 +56,7 @@ a prompt will be shown on the client's booking stating that it was successful. E
 ### Specification 3: Starred page - clients can star trainers they want and view them on this page. 
 ### Specification 4: Bookings page - clients can see all the bookings (rejected or successful) that they requested.
 ### Specification 5: Profile page Booking - clients can click on the username of the trainer and book the trainer through a form. 
+### Specification 6: Review - clients can leave a review on a trainer's page, through a form. Clients will be able to see reviews left by other clients.
 
 ## Trainer
 ### Specification 1: Unconfirmed Bookings page - trainers can see all bookings that they can accept and decline. 
@@ -68,5 +69,6 @@ a prompt will be shown on the client's booking stating that it was successful. E
 1. User - represents either the client or the trainer.
 2. Star - a Star object captures the relationship between the trainer that has been starred by a client.
 3. Booking - a Booking object captures the relationship and information regarding a booking made between a client and a trainer.
+4. Review - a Review object represents the relationship and information regarding a review left by a client, the content and the trainer's page.
 
 `gym/views.py` contains all the view functions necessary for processing of data and transferring of data back to the client-side. 
