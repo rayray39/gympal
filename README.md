@@ -8,6 +8,8 @@ will be able to view bookings and either accept or decline them.
 
 Hereon the gym-goer will be called the client and the personal trainer will just be called trainer. 
 
+![GymPal 1](https://github.com/rayray39/gympal/assets/108506541/83543b26-d12b-4118-b1e8-2bbadf10bc22)
+
 # Distinctiveness
 **GymPal** is distinct in the sense that it allows 2 different types of users to be registered - **the client and the trainer**. Depending on whether the user registers as a client or a trainer, 
 the user interface that they interact with will be different. Different web pages, features and functionalities will be rendered for each type of user. This is because the client's goals 
@@ -58,10 +60,14 @@ a prompt will be shown on the client's booking stating that it was successful. E
 ### Specification 5: Profile page Booking - clients can click on the username of the trainer and book the trainer through a form. 
 ### Specification 6: Review - clients can leave a review on a trainer's page, through a form. Clients will be able to see reviews left by other clients.
 
+![GymPal 2](https://github.com/rayray39/gympal/assets/108506541/7ce6cf0d-92f5-4de5-a388-f6e4d9962e09)
+
 ## Trainer
 ### Specification 1: Unconfirmed Bookings page - trainers can see all bookings that they can accept and decline. 
 ### Specification 2: Schedule page - accepted bookings by the trainer will be displayed on this page. 
 ### Specification 3: Profile page - trainer can edit information about themselves (years of experience, description and hourly rate).
+
+![GymPal 3](https://github.com/rayray39/gympal/assets/108506541/f974b038-3377-4353-9017-bfae3aba1d93)
 
 # File Structure
 `gym` is the name of the application and `capstone` is the name of the project. 
