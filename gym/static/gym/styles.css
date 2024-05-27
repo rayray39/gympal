@@ -1,0 +1,56 @@
+.body {
+    margin: 10px;
+}
+
+#trainer-marketplace-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.trainer-card-div {
+    padding: 20px;
+    margin: 10px;
+    height: 180px;
+    background-color: lightyellow;
+    font-size: 20px;
+}
+
+#filter-form-div {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.booking-main-div {
+    padding: 20px;
+    margin: 10px;
+    height: 210px;
+    background-color: lightyellow;
+    font-size: 16px;
+}
+
+.trainer-unconfirmed-booking-div {
+    padding: 20px;
+    margin: 10px;
+    height: 210px;
+    background-color: lightyellow;
+    font-size: 16px;
+}
+
+.trainer-accepted-booking-div {
+    padding: 20px;
+    margin: 10px;
+    height: 180px;
+    background-color: lightyellow;
+    font-size: 16px;
+}
+
+#review-form {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.trainer-review-card {
+    padding: 10px;
+    margin-top: 5px;
+    background-color: whitesmoke;
+}

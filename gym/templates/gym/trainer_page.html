@@ -1,0 +1,23 @@
+{% extends "gym/trainer_layout.html" %}
+{% load static %}
+
+{% block body %}
+    <h2>Trainer</h2>
+
+    <!-- show all the bookings where the current trainer is the booked trainer -->
+    <div id="unconfirmed-bookings-div"></div>
+
+    <!-- show all the bookings that have been accepted by the trainer (confirmed bookings) -->
+    <div id="trainer-schedule-page-div"></div>
+
+    <!-- show all the reviews received by this trainer -->
+    <div id="trainer-review-page-div"></div>
+
+    <!-- show the profile page of the trainer where some of the fields can be updated by the trainer -->
+    <div id="trainer-profile-page-div"></div>
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'gym/trainer_index.js' %}"></script>
+{% endblock %}

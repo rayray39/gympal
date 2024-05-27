@@ -1,0 +1,65 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Trainer Booking System{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'gym/styles.css' %}" rel="stylesheet">
+
+        <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+        <!-- this is where you type the JS code -->
+        {% block script %}
+        {% endblock %}
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <b>GymPal</b>
+            </a>
+          
+            <div>
+              <ul class="navbar-nav mr-auto">
+                <!-- show different tabs on the nav bar depending on whether user is authenticated or not -->
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>{{ user.username }}</strong></a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="all-trainers-nav" class="nav-link" href="{% url 'index' %}">Marketplace</a>
+                      </li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <!-- user can temporarily store the trainers they like by 'star-ing' them -->
+                        <a id="get-starred-trainers" class="nav-link" onclick="get_starred_trainers()">Starred</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- user can see their bookings made with the trainers they booked a session with -->
+                        <a id="get-bookings" class="nav-link" onclick="get_all_booked()">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}">Register</a>
+                    </li>
+                {% endif %}
+              </ul>
+            </div>
+          </nav>
+        
+        <div class="body">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
