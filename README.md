@@ -50,34 +50,24 @@ a prompt will be shown on the client's booking stating that it was successful. E
 
 # Specifications
 ## General
-### Specification 1: Registration - users can either register as a _Client_ or a _Trainer_. 
+#### Specification 1: Registration - users can either register as a _Client_ or a _Trainer_. 
 
 ## Client
-### Specification 1: Marketplace page - where clients can view all the trainers that are registered on GymPal. 
-### Specification 2: Marketplace Filter - clients can filter for trainers in the marketplace based on years of experience and description. 
-### Specification 3: Starred page - clients can star trainers they want and view them on this page. 
-### Specification 4: Bookings page - clients can see all the bookings (rejected or successful) that they requested.
-### Specification 5: Profile page Booking - clients can click on the username of the trainer and book the trainer through a form. 
-### Specification 6: Review - clients can leave a review on a trainer's page, through a form. Clients will be able to see reviews left by other clients.
+#### Specification 1: Marketplace page - where clients can view all the trainers that are registered on GymPal. 
+#### Specification 2: Marketplace Filter - clients can filter for trainers in the marketplace based on years of experience and description. 
+#### Specification 3: Starred page - clients can star trainers they want and view them on this page. 
+#### Specification 4: Bookings page - clients can see all the bookings (rejected or successful) that they requested.
+#### Specification 5: Profile page Booking - clients can click on the username of the trainer and book the trainer through a form. 
+#### Specification 6: Review - clients can leave a review on a trainer's page, through a form. Clients will be able to see reviews left by other clients.
 
 ![GymPal 2](https://github.com/rayray39/gympal/assets/108506541/7ce6cf0d-92f5-4de5-a388-f6e4d9962e09)
 
 ## Trainer
-### Specification 1: Unconfirmed Bookings page - trainers can see all bookings that they can accept and decline. 
-### Specification 2: Schedule page - accepted bookings by the trainer will be displayed on this page. 
-### Specification 3: Profile page - trainer can edit information about themselves (years of experience, description and hourly rate).
+#### Specification 1: Unconfirmed Bookings page - trainers can see all bookings that they can accept and decline. 
+#### Specification 2: Schedule page - accepted bookings by the trainer will be displayed on this page. 
+#### Specification 3: Profile page - trainer can edit information about themselves (years of experience, description and hourly rate).
 
 ![GymPal 3](https://github.com/rayray39/gympal/assets/108506541/f974b038-3377-4353-9017-bfae3aba1d93)
-
-# File Structure
-`gym` is the name of the application and `capstone` is the name of the project. 
-`gym/models.py` contains the Django models used. There are 3 models created for GymPal. 
-1. User - represents either the client or the trainer.
-2. Star - a Star object captures the relationship between the trainer that has been starred by a client.
-3. Booking - a Booking object captures the relationship and information regarding a booking made between a client and a trainer.
-4. Review - a Review object represents the relationship and information regarding a review left by a client, the content and the trainer's page.
-
-`gym/views.py` contains all the view functions necessary for processing of data and transferring of data back to the client-side. 
 
 # Lessons Learnt
 1. Using vanilla JavaScript to create dynamic web interfaces, including the use of buttons, textareas, and forms.
@@ -88,3 +78,25 @@ a prompt will be shown on the client's booking stating that it was successful. E
 6. Using the Django framework as an abstraction of SQL, to create models and enable the interaction with database.
 7. Using Python to create view functions that allow the frontend (client-side JavaScript) to interact with the backend (Django) and vice versa.
 8. Django's Model-View-Template (MVT) software design pattern. 
+
+# File Structure
+`gym` is the name of the application and `capstone` is the name of the project. 
+`gym/models.py` contains the Django models used. There are 4 models created for GymPal. 
+1. User - represents either the client or the trainer.
+2. Star - a Star object captures the relationship between the trainer that has been starred by a client.
+3. Booking - a Booking object captures the relationship and information regarding a booking made between a client and a trainer.
+4. Review - a Review object represents the relationship and information regarding a review left by a client, the content and the trainer's page.
+
+`gym/views.py` contains all the view functions necessary for processing of data and transferring of data back to the client-side. 
+`gym/templates/gym` contains all the HTML files for the web pages. 
+`gym/static/gym` contains all the CSS files necessary for the styling of the web pages. 
+`gym/urls.py` contains the urls (API endpoints that the Frontend invokes, to allow Backend to process the data).
+
+# How to Use
+- In the master branch, download all the files.
+- Ensure that Python (3.9.X) and Django (4.2.X) are installed, preferablly in a virtual environment.
+- Open the command prompt, and perform the following steps
+    1. `python manage.py makemigrations gym`, this step creates the set of 'instructions' to allow Django to build the database models.
+    2. `python manage.py migrate`, this step implements the set of 'instructions' created in step 1.
+    3. `python manage.py runserver`, this step creates the server locally.
+    4. Enter the local server address into the web browser and the website should appear.
